@@ -1,6 +1,6 @@
 
-item = document.getElementById("item")
-listContainer = document.getElementById("list-container")
+item = document.querySelector("#item")
+listContainer = document.querySelector("#list-container")
 
 function addItem() {
     const li = document.createElement("li")
@@ -15,10 +15,9 @@ function addItem() {
 
     item.value = ""
 
-    del.addEventListener("click", deleteItem)
-
-    function deleteItem() {
+    del.addEventListener("click", () => {
         listContainer.removeChild(li)
-    }
+    })
+
 }
 
